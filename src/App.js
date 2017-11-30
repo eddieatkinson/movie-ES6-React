@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import $ from 'jquery';
 import Poster from './Poster';
+import SearchBar from './SearchBar';
 
 class App extends Component {
 	constructor(props){
@@ -31,14 +32,13 @@ class App extends Component {
 		});
 	}
 
-	handleSubmit(event){
-		event.preventDefault();
-		var value = document.getElementById('searchTerm').value; // Ok to use jQuery, just DON'T mess with the DOM!
-		document.getElementById('searchTerm').value = "";
+	handleSubmit(searchValue){
+		// var value = document.getElementById('searchTerm').value; // Ok to use jQuery, just DON'T mess with the DOM!
+		// document.getElementById('searchTerm').value = "";
 		console.log("Form submitted!");
 		// console.log(value);
-		var url = `https://api.themoviedb.org/3/search/movie?api_key=fec8b5ab27b292a68294261bb21b04a5&query=${value}`;
-		// console.log(url);
+		var url = `https://api.themoviedb.org/3/search/movie?api_key=fec8b5ab27b292a68294261bb21b04a5&query=${searchValue}`;
+		console.log(url);
 		$.getJSON(url, (movieSearchData)=>{
 			// We have the new movies. Update state.
 			this.setState({
@@ -64,13 +64,7 @@ class App extends Component {
 
 		return (
 			<div className="App">
-				<h1>This is the movie app...again.</h1>
-				<div className="col-sm-12 text-center">
-					<form onSubmit={this.handleSubmit}>
-						<input id="searchTerm" type="text" placeholder="Movie Title" />
-						<button type="submit" className="btn btn-primary">Search</button>
-					</form>
-				</div>
+				<SearchBar onSubmit={this.handleSubmit} />
 				{postersArray}
 			</div>
 		);

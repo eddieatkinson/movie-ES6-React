@@ -8,7 +8,7 @@ class Poster extends Component{
 		var imagePath = `http://image.tmdb.org/t/p/w300${this.props.movie.poster_path}`;
 		var moviePage = `https://www.themoviedb.org/movie/${this.props.movie.id}`;
 		return(
-			<div className='col-sm-3'>
+			<div className='col-sm-3 poster'>
 				<a href={moviePage} target="_blank"><img src={imagePath} alt={this.props.movie.overview}/></a>
 				<h4>{this.props.movie.title}</h4><br />
 			</div>
