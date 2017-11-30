@@ -63,7 +63,7 @@ class App extends Component {
 		// });
 
 		return (
-			<div className="App">
+			<div className="App container-fluid">
 				<SearchBar onSubmit={this.handleSubmit} />
 				{postersArray}
 			</div>

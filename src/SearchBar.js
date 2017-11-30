@@ -15,7 +15,7 @@ class SearchBar extends Component{
 
 	render(){
 		return(
-			<div className="col-sm-12 text-center">
+			<div className="search-bar col-sm-12 text-center">
 				<form onSubmit={this.handleSearch}>
 					<input id="searchTerm" type="text" placeholder="Movie Title" />
 					<button type="submit" className="btn btn-primary">Search</button>

@@ -10,7 +10,7 @@ class Poster extends Component{
 		return(
 			<div className='col-sm-3 poster'>
 				<a href={moviePage} target="_blank"><img src={imagePath} alt={this.props.movie.overview}/></a>
-				<h4>{this.props.movie.title}</h4><br />
+				<h4 className="movie-title">{this.props.movie.title}</h4><br />
 			</div>
 		)
 	}
