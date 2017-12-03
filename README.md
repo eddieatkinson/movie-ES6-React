@@ -15,6 +15,7 @@ This application allows a user to search for a movie by title and access its web
 
 **Other**
 * AJAX
+* "The Movie Database" API
 
 ## Code snippets:
 Principal component:
@@ -116,5 +117,8 @@ class Poster extends Component{
 export default Poster;
 ```
 ## Screenshots
+Home page:
 ![Homepage](movie.png)
+
+If "superman" is searched:
 ![Superman Search](supermanSearch.png)
