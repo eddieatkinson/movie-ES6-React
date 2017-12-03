@@ -55,7 +55,6 @@ class App extends Component {
     var postersArray = [];
 
     this.state.movies.map((movie, index)=>{
-      // postersArray.push(<Poster key={index} id={movie.id} overview={movie.overview} title={movie.title} poster={movie.poster_path} />)
       postersArray.push(<Poster key={index} movie={movie} />)
       return null; // To get the linter to shut up (it expects a return from map)...
     });
@@ -72,7 +71,7 @@ class App extends Component {
 export default App;
 ```
 Search bar Component:
-```
+``` javascript
 class SearchBar extends Component{
   constructor(){
     super();
@@ -99,8 +98,8 @@ class SearchBar extends Component{
 
 export default SearchBar;
 ```
-Movie poster component
-```
+Movie poster component:
+``` javascript
 class Poster extends Component{
   render(){
     var imagePath = `http://image.tmdb.org/t/p/w300${this.props.movie.poster_path}`;
