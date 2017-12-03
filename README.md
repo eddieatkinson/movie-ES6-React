@@ -17,7 +17,7 @@ This application allows a user to search for a movie by title and access its web
 * AJAX
 
 ## Code snippets:
-Principle component:
+Principal component:
 ``` javascript
 class App extends Component {
   constructor(props){
@@ -116,3 +116,5 @@ class Poster extends Component{
 export default Poster;
 ```
 ## Screenshots
+![Homepage](movie.png)
+![Superman Search](supermanSearch.png)
