@@ -16,16 +16,16 @@ class App extends Component {
 	}
 
 	// I am special. I will run ONE time, before the first render.
-	componentWillMount(){
-		console.log("The component is about to mount.");
-	}
+	// componentWillMount(){
+	// 	console.log("The component is about to mount.");
+	// }
 
 	// I am special. I will run ONE time, after the first render.
 	componentDidMount(){
-		console.log("The component mounted.");
+		// console.log("The component mounted.");
 		var url = 'http://api.themoviedb.org/3/movie/now_playing?api_key=fec8b5ab27b292a68294261bb21b04a5';
 		$.getJSON(url, (movieData)=>{
-			console.log(movieData);
+			// console.log(movieData);
 			this.setState({
 				movies: movieData.results
 			});
